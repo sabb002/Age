@@ -10,16 +10,15 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-	apiKey: "AIzaSyA1u6QO5PJKWQgM_m82HVEBWeL9eb6DarE",
-	authDomain: "agecalculator-385dd.firebaseapp.com",
-	projectId: "agecalculator-385dd",
-	storageBucket: "agecalculator-385dd.appspot.com",
-	messagingSenderId: "795355637902",
-	appId: "1:795355637902:web:4cb095488512a634e981df",
-	measurementId: "G-GS6D8C0B2G",
+	apiKey: "AIzaSyAock74gNyhQdel2Vd-N5sorNSh84cpnis",
+	authDomain: "agecalculator-7413a.firebaseapp.com",
+	projectId: "agecalculator-7413a",
+	storageBucket: "agecalculator-7413a.appspot.com",
+	messagingSenderId: "846201843501",
+	appId: "1:846201843501:web:e36542d5def39ad4f66da4",
+	measurementId: "G-F0XSHZCR03",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 getAnalytics(app);
 /* ================ Firebase end ================*/
