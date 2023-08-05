@@ -128,7 +128,7 @@ section.calc label span {
 }
 
 section.calc input[type="date"] {
-	width: fit-content;
+	display: inline-flex;
 	font-weight: bold;
 	font-size: 18px;
 	padding: 5px 10px;
