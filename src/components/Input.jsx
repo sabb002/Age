@@ -48,6 +48,7 @@ export default function Input({ setDob, disc, shrink, setShrink, calculate }) {
 				</label>
 				<input
 					type="date"
+					placeholder="Date"
 					className={limit ? "limit" : null}
 					onChange={getDOB}
 				/>
@@ -86,8 +87,7 @@ export default function Input({ setDob, disc, shrink, setShrink, calculate }) {
 					মুলত দুটি পদ্ধতিতে বয়স গণনা করা যায়।
 					<div>
 						পদ্ধতি ১ঃ গতানুগতিক বয়স গণনায় আমরা দিন, মাস, বছরের সূক্ষ্ম হিসাব করি
-						না। এ পদ্ধতিতে সকল বছর ৩৬৫ দিন ও সকল মাস ৩০ দিন ধরা হয়। আরে ভাই
-						স্কুলে যা শিখায় আর কি।
+						না। এ পদ্ধতিতে সকল বছর ৩৬৫ দিন ও সকল মাস ৩০ দিন ধরা হয়।
 						<br /> উদাহরণস্বরূপ, একজন মা যখন বলে আমার বাচ্চার বয়স ৬ মাস, তিনি
 						অতিবাহিত মাসগুলো ২৮, ২৯, ৩০ নাকি ৩১ দিনের ছিল তা হিসাব করে বলেন না।
 						এই পদ্ধতিই সর্বজনস্বীকৃত।
