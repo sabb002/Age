@@ -5,24 +5,6 @@ import Input from "./components/Input";
 import Loading from "./components/Loading";
 import "./App.css";
 
-/* ================ Firebase start ================*/
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-
-const firebaseConfig = {
-	apiKey: "AIzaSyAock74gNyhQdel2Vd-N5sorNSh84cpnis",
-	authDomain: "agecalculator-7413a.firebaseapp.com",
-	projectId: "agecalculator-7413a",
-	storageBucket: "agecalculator-7413a.appspot.com",
-	messagingSenderId: "846201843501",
-	appId: "1:846201843501:web:e36542d5def39ad4f66da4",
-	measurementId: "G-F0XSHZCR03",
-};
-
-const app = initializeApp(firebaseConfig);
-getAnalytics(app);
-/* ================ Firebase end ================*/
-
 function App() {
 	const [mode, setMode] = useState(localStorage.getItem("mode") || "light");
 	const [disc, setDisc] = useState(true);
