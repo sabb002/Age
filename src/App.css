@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&display=swap");
+
+:root {
+	--primary-font: "Poppins", sans-serif;
+	--bangla-font: "Noto Serif Bengali", "Poppins", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+	user-select: none;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.light {
+	background-color: #ffffff;
+	background-image: none;
+	color: #272829;
+	transition: background-color 400ms;
+}
+.dark {
+	min-height: 100vh;
+	background-color: #272829;
+	background-image: linear-gradient(45deg, #0f2027, #163944, #2c5364);
+	background-repeat: no-repeat;
+	color: #ffffff;
+	transition: background-color 400ms;
+}
+header {
+	position: absolute;
+	width: 100%;
+	z-index: 9;
+	padding: 10px 30px;
+	font-family: var(--primary-font);
+	font-weight: 700;
+	font-size: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.15);
+}
+
+header .toggle_mode {
+	width: 60px;
+	height: 35px;
+	background-color: #ebebeb;
+	box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1),
+		inset 0 -5px 10px rgba(255, 255, 255, 0.1);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border-radius: 20px;
+	padding: 1px;
+	cursor: pointer;
+}
+header .toggle_mode[data-mode="dark"] {
+	justify-content: flex-end;
+	background-color: #27bb65;
+}
+
+header .toggle_mode .handle {
+	width: 30px;
+	height: 30px;
+	background: #ffffff;
+	border-radius: 50%;
+}
+section {
+	font-family: var(--primary-font);
+}
+
+section.calc {
+	min-height: 100vh;
+	padding-top: 100px;
+}
+section.calc.shrink {
+	min-height: auto;
+}
+section.calc .inputAge {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+section.calc .button {
+	display: flex;
+	justify-content: center;
+	padding: 2rem 0;
+}
+
+section.calc.shrink .button {
+	display: none;
+}
+section.calc .button button {
+	background: seagreen;
+	width: 110px;
+	height: 40px;
+	padding: 5px 10px;
+	font-size: 15px;
+	font-weight: 700;
+	border-radius: 7px;
+	color: #ffffff;
+	border: none;
+	box-shadow: inset 0 10px 5px rgba(255, 255, 255, 0.3),
+		inset 0 -1px 2px rgba(255, 255, 255), 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+section.calc .button button:active {
+	transform: translate(1px, 1px);
+	box-shadow: inset 0 10px 5px rgba(255, 255, 255, 0.2),
+		inset 0 -1px 2px rgba(255, 255, 255);
+}
+
+section.calc label {
+	align-self: center;
+	font-size: 16px;
+	font-weight: 500;
+}
+section.calc label span {
+	font-family: var(--bangla-font);
+}
+
+section.calc input[type="date"] {
+	width: fit-content;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 5px;
+}
+section.calc .inputAge input[type="date"].limit {
+	outline: 2px solid rgb(225, 25, 25);
+}
+
+section.calc .disc {
+	font-family: var(--bangla-font);
+	font-size: 15px;
+	color: inherit;
+	width: min(90vw, 600px);
+	margin: 0 auto;
+	padding: 0px 20px 20px;
+	text-align: justify;
+}
+section.calc .disc .title {
+	font-family: var(--primary-font);
+	font-weight: 500;
+	padding-right: 5px;
+}
+
+section.calc .disc div {
+	padding: 5px 0;
+}
+
+section.container {
+	margin: 10px;
+}
+
+section.container .row {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	font-weight: 500;
+}
+
+section.container .row > div {
+	background-color: #ffffff1f;
+	width: 100%;
+	margin: 10px;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+		rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+section.container .row .age {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border-bottom: 1px solid crimson;
+}
+section.container .row .age div {
+	background: #ffffff10;
+	margin: 5px 0;
+	padding: 5px 10px;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+section.container .row .card-2 {
+	min-height: 150px;
+}
+section.container .row .card-2.nextBirthday {
+	font-size: 16px;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+	background-position: center;
+	border-bottom: 1px solid #7cfc00;
+}
+
+section.container .row .card-2.birthdayData {
+	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	background-size: cover;
+	background-position: bottom;
+	border-bottom: 1px solid #286fa8;
+}
+section.container .row .card-2.birthdayData div {
+	background: #ffffff10;
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	margin: 5px 0;
+	padding: 5px 10px;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+section.container .row .card-3 {
+	height: 300px;
+}
+
+section.container .row .card-3.quote {
+	position: relative;
+	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 5px;
+	border-bottom: 1px solid #6a5acd;
+}
+
+section.container .row .card-3.quote .quoteText {
+	font-size: 18px;
+	padding: 0 10px;
+}
+section.container .row .card-3.quote .quoteAuthor {
+	align-self: flex-end;
+}
+
+section.container .row .card-3.zodiac {
+	color: #ffffff;
+	font-size: 15px;
+	border-bottom: 1px solid #ffe920;
+}
+
+section.container .row .famous {
+	color: #ff6087;
+	font-weight: 700;
+	text-align: center;
+	border-bottom: 1px solid #dc143c;
+}
+
+section.container .row .card-4 {
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	box-shadow: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+section.container .row .card-4 .celeb {
+	flex: 1;
+	padding: 10px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+section.container .row .card-4 .celeb h4 {
+	color: #ff6087;
+}
+section.container .row .card-4 .celeb img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: top;
+}
+section.container .row .card-4 .celeb p {
+	text-align: center;
+}
+section.container .footer {
+	font-weight: 700;
+	font-size: 10px;
+	margin-top: 10px;
+	padding-top: 10px;
+	text-align: center;
+	border-top: 1px solid #ffffff;
+}
+
+@media screen and (min-width: 960px) {
+	header {
+		padding: 10px 50px;
+	}
+	section.calc .inputAge {
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	section.calc .disc {
+		font-size: 18px;
+	}
+	section.container .row .age {
+		max-width: 900px;
+		flex: 100%;
+	}
+	section.container .row .card-2 {
+		max-width: 440px;
+		min-height: 225px;
+		flex: 100%;
+	}
+	section.container .row .card-3.quote {
+		max-width: 590px;
+		flex: 100%;
+	}
+
+	section.container .row .card-3.zodiac {
+		max-width: 290px;
+		flex: 100%;
+	}
+	section.container .row .famous {
+		max-width: 900px;
+	}
+	section.container .row .card-4 {
+		max-width: 900px;
+	}
+	section.container .row .card-4 .celeb {
+		max-width: 300px;
+	}
+}
