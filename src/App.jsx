@@ -32,7 +32,7 @@ function App() {
 	async function fetchDobData(day, month, year) {
 		try {
 			const response = await fetch(
-				`http://api.aladhan.com/v1/gToH/${day}-${month + 1}-${year}`
+				`https://api.aladhan.com/v1/gToH/${day}-${month + 1}-${year}`
 			);
 			const data = await response.json();
 			return data;
