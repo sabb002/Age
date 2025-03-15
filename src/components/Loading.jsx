@@ -1,5 +1,6 @@
 export default function Loading() {
 	return (
+		<>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="150px"
@@ -122,5 +123,6 @@ export default function Loading() {
 				></animate>
 			</circle>
 		</svg>
+		</>
 	);
 }

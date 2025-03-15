@@ -4,7 +4,7 @@ import birthday from "../assets/img/birthday.png";
 import forest from "../assets/img/forest.png";
 import quotebg from "../assets/img/quotebg.png";
 import banner from "../assets/img/banner.png";
-import Quotes from "./Qoutes";
+import Quotes from "./Quotes";
 import FamousCard from "./FamousCard";
 
 // zodiacs
@@ -76,7 +76,7 @@ export default function Result({ result }) {
 			break;
 	}
 
-	const quoteIndex = Math.floor(Math.random() * 3000);
+	const quoteIndex = Math.floor(Math.random() * Quotes.length);
 
 	let zodiacURL = "";
 	if (zodiacSign === "Aries - মেঘ") zodiacURL = aries;

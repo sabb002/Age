@@ -72,7 +72,7 @@ function App() {
 		const dobDay = dob.getDate();
 
 		/*--------------------------------- */
-		let nextBirthday = new Date(`${todayYear + 1}- ${dobMonth + 1}, ${dobDay}`);
+		let nextBirthday = new Date(`${todayYear + 1} , ${dobMonth + 1}, ${dobDay + 1}`);
 		let daysLeft = Math.floor((nextBirthday - today) / 86400000);
 		if (daysLeft >= 365) daysLeft -= 365;
 		/*--------------------------------- */
@@ -236,7 +236,6 @@ function App() {
 			}
 		}
 		// now days
-		//hehe boi this is fun;
 		exactDay += today_day;
 
 		/* ====== Fetch arabic birthday data from an api ====== */

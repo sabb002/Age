@@ -42,6 +42,7 @@ export default function Input({ setDob, disc, shrink, setShrink, calculate }) {
 
 	return (
 		<section className={`calc ${shrink ? "shrink" : null}`}>
+			<div id="Idbar"></div>
 			<div className="inputAge">
 				<label htmlFor="dob">
 					Date Of Birth <span>[মাস/দিন/সাল]</span> :
@@ -96,9 +97,9 @@ export default function Input({ setDob, disc, shrink, setShrink, calculate }) {
 						পদ্ধতি ২ঃ এই পদ্ধতিতে লিপ ইয়ার বা অধিবর্ষ এবং প্রতিটি মাসে দিনের
 						সংখ্যা আমলে নিয়ে সূক্ষ্ম ভাবে বয়স হিসাব করা হয়। তবে এক্ষেত্রে শুধু
 						মোট অতিবাহিত দিনের সংখ্যা বের করা হয়, তাকে বছর বা মাসে রূপান্তর করা
-						হয় না। কেন এইটা না বুঝলে আমার কিছু করার নাই।
+						হয় না।
 					</div>
-					<div>এখানে দুটি পদ্ধতিই প্রয়োগ করা হয়েছে।</div>
+					<div>এখানে উভয়টি পদ্ধতিতে বয়স জানতে পারবেন।</div>
 				</div>
 			)}
 		</section>
